@@ -6,29 +6,29 @@ const DELETE ="DELETE";
 // action creater
 export const submit =(payload)=>{
   return {
-      type: SUBMIT,
-      payload: payload,
+    type: SUBMIT,
+    payload: payload,
   }
 }
 
 export const doner =(id) =>{
   return{
-      type :DONE,
-      payload: id
+    type :DONE,
+    payload: id
   }
 }
 
 export const cancler =(id)=>{
   return {
-      type : CANCLE,
-      payload: id
+    type : CANCLE,
+    payload: id
   }
 }
 
 export const deleter =(id)=>{
   return {
-      type: DELETE,
-      payload: id
+    type: DELETE,
+    payload: id
   }
 }
 

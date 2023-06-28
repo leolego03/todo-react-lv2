@@ -5,7 +5,7 @@ function TodoList() {
   const data = useSelector((state)=>{
     return state.todoinput
   })
-  console.log(data)
+  // console.log(data)
 
   return (
     <>
