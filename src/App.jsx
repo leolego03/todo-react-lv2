@@ -1,10 +1,9 @@
 import { useDispatch, useSelector } from 'react-redux';
 import './App.css';
-import { useState } from 'react';
-import { submit } from './redux/modules/todoinput';
 import { doner } from './redux/modules/todoinput';
 import { cancler } from './redux/modules/todoinput';
 import { deleter } from './redux/modules/todoinput';
+import Form from './components/Form';
 
 function App() {
 
@@ -16,29 +15,9 @@ console.log(data)
 // dispatch 가져오기
 const dispatch =useDispatch();
 
-const buttonHandler =()=>{
-  dispatch(submit({
-    title:title,
-    body:body
-  }));
-  setTitle('');
-  setBody('')
-}
 
 
-// input state 값
-const [title,setTitle] = useState('')
-const [body, setBody] = useState('')
-
-const titleHandler = (e)=>{
-  setTitle(e.target.value)
-}
-
-const bodyHandler = (e) =>{
-  setBody(e.target.value)
-}
-
-// button handler 완료
+// done handler 완료
 const doneHandler = (id)=>{
   dispatch(doner(id))
 }
@@ -55,11 +34,7 @@ const deleteHandler =(id)=>{
 
   return (
     <>
-    <div>
-       제목 :<input type='text'  name='title' onChange={titleHandler} value={title}/>
-      내용 :<input type='text' name='body' onChange={bodyHandler} value={body}/>
-      <button onClick={buttonHandler}> 추가</button>
-    </div>
+  <Form/>
     <div>
     <h2>Working~</h2>
     <div className='container-list'>
