@@ -4,7 +4,7 @@ import { combineReducers } from "redux";
 import todoinput from "../modules/todoinput";
 
 const rootReducer = combineReducers({
-    todoinput,
+  todoinput,
 });
 const store = createStore(rootReducer);
 
