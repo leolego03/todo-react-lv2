@@ -1,3 +1,4 @@
+const {nanoid} = require('nanoid')
 const SUBMIT ="SUBMIT";
 const DONE ="DONE"
 const CANCLE ="CANCLE"
@@ -42,10 +43,20 @@ const initialState = [
 // 리듀서 : 함수
 // input : state 와 action
 
+
+
 const todoinput =(state = initialState , action)=>{
+
+    //new ID
+    const generateUniqueId = ()=>{
+        return nanoid()
+    }
+    
+
     switch (action.type){
         case SUBMIT:
-            return [...state,{id:Math.floor(Math.random()*100), title: action.payload.title, body:action.payload.body, done:false}]
+            const newId = generateUniqueId();
+            return [...state,{id:newId, title: action.payload.title, body:action.payload.body, done:false}]
         case DONE:
             return state.map((item)=>
                 item.id === action.payload? {...item,done:true} : item
