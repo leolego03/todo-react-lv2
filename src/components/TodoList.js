@@ -9,9 +9,9 @@ function TodoList() {
 
   return (
     <>
-      <div>
+      <div className='TodoList'>
         <h2>Working~</h2>
-        <div className='container-list'> 
+        <div className='TodoList-inner'> 
         {
           data.filter((item) => item.done === false).map((item) => (
             <TodoItem
@@ -26,9 +26,9 @@ function TodoList() {
         </div>
       </div>
 
-      <div>
+      <div className='TodoList'>
         <h2>Done!!</h2>
-        <div className='container-list'>
+        <div className='TodoList-inner'>
         {
           data.filter((item)=> item.done === true).map((item) => (
             <TodoItem

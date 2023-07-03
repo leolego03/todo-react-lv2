@@ -25,14 +25,14 @@ function TodoItem({ ...item }) {
 
   return (
     <>
-      <div key={item.id}>
-      <h3> {item.title}</h3>
-      <p> {item.body}</p>
-      <div>
-        <Link to={`/view/${item.id}`}>상세보기</Link>
-        <button onClick={ () => deleteHandler(item.id) }>삭제</button>
-        { !item.done && <button onClick={ () => doneHandler(item.id) }>완료</button> }
-        { item.done && <button onClick={ () => cancleHandler(item.id) }>취소</button> }
+      <div className='Todo' key={item.id}>
+        <h3> {item.title}</h3>
+        <p> {item.body}</p>
+        <div className='Todo-inner'>
+          <Link to={`/view/${item.id}`}>상세보기</Link>
+          <button onClick={ () => deleteHandler(item.id) }>삭제</button>
+          { !item.done && <button onClick={ () => doneHandler(item.id) }>완료</button> }
+          { item.done && <button onClick={ () => cancleHandler(item.id) }>취소</button> }
         </div>
       </div>
     </>

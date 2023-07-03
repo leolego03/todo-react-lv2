@@ -1,10 +1,16 @@
-import { useState } from "react"
-import { useDispatch } from 'react-redux';
+import { useState, useRef } from "react"
+import { useDispatch, useSelector } from 'react-redux';
 import { submit } from "../redux/modules/todoinput";
 
 function Form() {
   // dispatch 가져오기
   const dispatch = useDispatch();
+  
+  const data = useSelector((state)=>{
+    return state.todoinput
+  })
+  const lastId = data.length ? data[data.length - 1].id + 1 : 1;
+  const nextId = useRef(lastId);
 
   const [title, setTitle] = useState('')
   const [body, setBody] = useState('')
@@ -18,19 +24,25 @@ function Form() {
   }
   
   const buttonHandler =()=>{
-    dispatch(submit({
+    if(title && body) {
+      dispatch(submit({
+        id: nextId.current,
         title: title,
-        body: body
-      })
-    );
-    setTitle('');
-    setBody('')
+        body: body,
+        done: false
+      }));
+      setTitle('');
+      setBody('');
+      nextId.current += 1;
+    }
   }
 
   return(
-  <div>
-    제목 : <input type='text'  name='title' onChange={titleHandler} value={title}/>
-    내용 : <input type='text' name='body' onChange={bodyHandler} value={body}/>
+  <div className="Form-container">
+    <label htmlFor="title">제목 </label>
+    <input id="title" type='text'  name='title' onChange={titleHandler} value={title}/>
+    <label htmlFor="body">내용 </label>
+    <input id="body" type='text' name='body' onChange={bodyHandler} value={body}/>
     <button onClick={buttonHandler}> 추가</button>
   </div>
   )

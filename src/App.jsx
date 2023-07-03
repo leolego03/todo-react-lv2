@@ -5,13 +5,20 @@ import View from "./components/View";
 
 function App() {
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="view" element={<View />} />
-        <Route path="view/:id" element={<View />} />
-      </Routes>
-    </BrowserRouter>
+    <>
+      <div className="Header">
+        <p>Todo React</p>
+        <p>Level2</p>
+      </div>
+
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="view" element={<View />} />
+          <Route path="view/:id" element={<View />} />
+        </Routes>
+      </BrowserRouter>
+    </>
   )
 }
 

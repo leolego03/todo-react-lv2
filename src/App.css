@@ -1,0 +1,136 @@
+.Home-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.Header {
+  max-width: 1200px;
+  margin: 0 auto;
+  height: 60px;
+  border: 1px solid #ddd;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.Header p {
+  margin: 20px;
+}
+
+.Form-container {
+  display: flex;
+  padding: 30px;
+  background-color: #eee;
+}
+
+.Form-container label {
+  height: 30px;
+  line-height: 30px;
+  font-weight: bold;
+}
+
+.Form-container input {
+  border: 1px solid #eee;
+  margin: 0 24px;
+  height: 30px;
+  width: 300px;
+  border-radius: 12px;
+  outline: none;
+  padding: 0 10px;
+  box-sizing: border-box;
+}
+
+.Form-container button {
+  border: none;
+  background-color: #0c4ca6;
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  height: 30px;
+  cursor: pointer;
+  width: 120px;
+  border-radius: 12px;
+}
+
+.TodoList h2 {
+  margin: 20px;
+}
+
+.TodoList-inner {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin: 0 20px;
+}
+
+.Todo {
+  border: 1px solid #ddd;
+  width: 20%;
+  padding: 0 24px;
+  border-radius: 12px;
+}
+
+.Todo h3 {
+  margin: 20px 0;
+}
+
+.Todo P {
+  margin: 0 0 20px 0;
+}
+
+.Todo-inner {
+  margin-bottom: 20px;
+}
+
+.Todo-inner a {
+  margin-right: 10px;
+}
+
+.Todo-inner button {
+  width: 50px;
+  height: 25px;
+  font-size: 16px;
+  border: 1px solid red;
+  border-radius: 5px;
+  background-color: transparent;
+  margin-right: 5px;
+}
+
+.Todo-inner button:nth-of-type(1) {
+  border: 1px solid green;
+}
+
+.View-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.View {
+  border: 1px solid #ddd;
+  margin: 30px;
+  padding: 24px 20px;
+  border-radius: 12px;
+}
+
+.View h3 {
+  margin: 0 0 20px 0;
+}
+
+.View span {
+  display: block;
+  margin-bottom: 20px;
+}
+
+.View P {
+  margin: 0 0 20px 0;
+}
+
+.View button {
+  width: 120px;
+  height: 25px;
+  font-size: 16px;
+  border: 1px solid green;
+  border-radius: 5px;
+  background-color: transparent;
+}

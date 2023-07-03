@@ -17,12 +17,14 @@ function View() {
   // console.log("foundData", foundData);
 
   return (
-    <>
-      <div>{foundData.id}</div>
-      <div>{foundData.title}</div>
-      <div>{foundData.body}</div>
-      <button onClick={ () => {navigate("/")} }>이전으로</button>
-    </>
+    <div className='View-container'>
+      <div className='View'>
+        <h3>{foundData.title}</h3>
+        <span>Todo id: {foundData.id}</span>
+        <p>{foundData.body}</p>
+        <button onClick={ () => {navigate("/")} }>이전으로</button>
+      </div>
+    </div>
   )
 }
 
