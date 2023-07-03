@@ -1,7 +1,7 @@
 import React from "react";
 import { useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
-import { Detailbox, Htag, Pid, Pbody } from "../components/Boxes/Detialbox";
+import { Detailbox, Htag, Pid, Pbody, Button } from "../components/Boxes/Detialbox";
 
 
 function Detail() {
@@ -20,8 +20,9 @@ function Detail() {
   return (
     <>
       <Detailbox>
-        <Pid> id: {foundData.id}</Pid>
+      <Button onClick={() => { window.location.href = "/"; }}> 이전 </Button> 
         <Htag>제목: {foundData.title} </Htag>
+        <Pid> id: {foundData.id}</Pid>
         <Pbody>내용: {foundData.body} </Pbody>
       </Detailbox>
     </>
