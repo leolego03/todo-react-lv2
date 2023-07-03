@@ -2,6 +2,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { cancler, deleter } from "../redux/modules/todoinput";
 import Wrapperbox from "./Boxes/Wrapperbox";
 import { Link } from "react-router-dom";
+import { Buttonediv, Cancelbutton, Deletebutton } from "./Boxes/Button";
 
 
 
@@ -33,10 +34,10 @@ function DoneListWrapper() {
               <Link to={`/${item.id}`}><p>상세페이지</p></Link>
               <h3> {item.title}</h3>
               <p> {item.body}</p>
-              <div>
-                <button onClick={() => deleteHandler(item.id)}>삭제</button>
-                <button onClick={() => cancleHandler(item.id)}>취소</button>
-              </div>
+              <Buttonediv>
+                <Deletebutton onClick={() => deleteHandler(item.id)}>삭제</Deletebutton>
+                <Cancelbutton onClick={() => cancleHandler(item.id)}>취소</Cancelbutton>
+              </Buttonediv>
             </Wrapperbox>
           );
         })}
