@@ -1,17 +1,26 @@
 #### todo-react-lv2
 ```
-Todo 웹 애플리케이션 Level2
+Todo Web Application Level2
 ```
 
-+ 스택
++ Library
   + React
 
-+ 팀원
++ Team member
   + [mmms2000](https://github.com/mmms2000)
   + [leolego03](https://github.com/leolego03)
 
-#### 코드 컨벤션
+#### Design
+![todo-react-lv2-design](./images-readme/todo-react-lv2-design.png)
+
+#### Code Convention
 ```
-Pascal Case: 컴포넌트
-Camel Case: 함수, 변수
+Pascal Case: Component
+Camel Case: Function, Variable
+```
+
+#### Roles
+```
+mmms2000: Redux, Styled-Component
+leolego03: Router, CSS
 ```

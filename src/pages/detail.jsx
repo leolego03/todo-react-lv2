@@ -21,9 +21,9 @@ function Detail() {
     <>
       <Detailbox>
       <Button onClick={() => { window.location.href = "/"; }}> 이전 </Button> 
-        <Htag>제목: {foundData.title} </Htag>
-        <Pid> id: {foundData.id}</Pid>
-        <Pbody>내용: {foundData.body} </Pbody>
+        <Pid>id: {foundData.id}</Pid>
+        <Htag>제목: {foundData.title}</Htag>
+        <Pbody>내용: {foundData.body}</Pbody>
       </Detailbox>
     </>
   );
