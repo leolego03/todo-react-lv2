@@ -1,6 +1,6 @@
 import React from "react";
 import { useSelector } from "react-redux";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { Detailbox, Htag, Pid, Pbody, Button } from "../components/Boxes/Detialbox";
 
 
@@ -10,6 +10,7 @@ function Detail() {
   });
 
   const params = useParams();
+  const navigate = useNavigate();
 
   //data find
 
@@ -20,7 +21,7 @@ function Detail() {
   return (
     <>
       <Detailbox>
-      <Button onClick={() => { window.location.href = "/"; }}> 이전 </Button> 
+      <Button onClick={() => { navigate("/") }}> 이전 </Button> 
         <Pid>id: {foundData.id}</Pid>
         <Htag>제목: {foundData.title}</Htag>
         <Pbody>내용: {foundData.body}</Pbody>
